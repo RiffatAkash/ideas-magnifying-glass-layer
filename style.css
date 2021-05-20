@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+section{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 250px;
+    background:url(slide_1.jpg);
+    background-attachment: fixed;
+}
+section:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 100%;
+    background:url(slide_1.jpg);
+    background-attachment: fixed;
+    box-shadow: 20px 0 100px rgba(0, 0, 0, .2),
+                -20px 0 100px rgba(0, 0, 0, .2);
+    background-size: 350px 300px;
+    background-position: 0% 0%;
+    animation: animate 10s ease-in-out infinite;
+}
+@keyframes animate{
+    0%,100%{
+        left: 0px;
+    }
+    50%{
+        left: calc(100% - 70px);
+    }
+}
